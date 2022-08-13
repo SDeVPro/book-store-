@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block title %}Kirish{% endblock title %}
+
+{% block content %}
+
+<h3>Kirish</h3>
+
+<form method = "post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type = "submit" class = 'btn btn-success'>Kirish</button>
+    <a class = "btn btn-outline-info" href = "{% url 'signup' %}" role = "button">Profil yaratish</a>    
+</form>
+
+
+{% endblock content %}
